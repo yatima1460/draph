@@ -1,17 +1,25 @@
 module draph;
 
 import std.net.curl;
-
 import std.stdio;
 import std.json;
+import std.exception;
 
-string draph_page_publish_text(string token, string id, string text)
+immutable auto DRAPH_GRAPH_API_URL = "https://graph.facebook.com/";
+
+string draph_page_publish_text(string page_id, string token, string text)
 {
-    immutable auto post_url = "https://graph.facebook.com/" ~ id ~ "/feed";
+    enforce(token !is null);
+    enforce(page_id !is null);
+    enforce(text !is null);
+    immutable auto post_url = DRAPH_GRAPH_API_URL ~ page_id ~ "/feed";
     return post(post_url, ["access_token": token, "message": text]).idup;
 }
-
-bool draph_sdk_page_publish_image(string token, byte[] image)
+/* TO BE IMPLEMENTED */
+string draph_page_publish_image(string page_id, string token, byte[] image)
 {
-    return false;
+    enforce(token !is null);
+    enforce(page_id !is null);
+    enforce(image !is null);
+    return null;
 }
