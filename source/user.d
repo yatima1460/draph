@@ -1,0 +1,6 @@
+module user;
+
+struct User
+{
+
+}

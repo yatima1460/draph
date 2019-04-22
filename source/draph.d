@@ -6,6 +6,26 @@ import std.json;
 import std.exception;
 
 immutable auto DRAPH_GRAPH_API_URL = "https://graph.facebook.com/";
+immutable auto DRAPH_GRAPH_VERSION = "v3.2";
+
+struct User
+{
+    
+}
+
+
+struct Link
+{
+    string id;
+    string created_time;
+    string description;
+    User from;
+    string icon;
+    string link;
+    string message;
+    string name;
+    string picture;
+}
 
 string draph_page_publish_text(string page_token, string text)
 {
@@ -16,6 +36,11 @@ string draph_page_publish_text(string page_token, string text)
 }
 
 /***** TO BE IMPLEMENTED *****/
+
+string draph_link_get(string token, string link_id)
+{
+    return null;
+}
 
 string draph_page_publish_image(string token, string page_id, byte[] image)
 {
