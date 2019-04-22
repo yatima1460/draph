@@ -1,0 +1,11 @@
+{
+	"authors": [
+		"Federico Santamorena"
+	],
+	"copyright": "Copyright © 2019, Federico Santamorena",
+	"description": "Dlang Facebook Graph API",
+	"license": "GPLv2",
+	"name": "draph",
+	"sourcePaths": ["tests", "source"],
+	"importPaths": ["tests", "source"]
+}
