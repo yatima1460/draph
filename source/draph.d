@@ -27,6 +27,9 @@ struct Link
     string picture;
 }
 
+/**
+Publishes a text message to a page given the page_token
+*/
 string draph_page_publish_text(string page_token, string text)
 {
     enforce(page_token !is null);
