@@ -72,3 +72,15 @@ string draph_object(string token, string[] objects_ids)
     return null;
 }
 
+/**
+app_id = "123123123123"
+redirect_url = "https://example.com/auth-response"
+optional permissions = ["manage_pages","publish_pages",...]
+
+Returns: string of the url, null if fail
+*/
+
+string draph_auth_url(string app_id, string redirect_url, string[] permissions)
+{
+    return null;
+}
