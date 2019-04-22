@@ -7,9 +7,6 @@ import std.exception;
 
 immutable auto DRAPH_GRAPH_API_URL = "https://graph.facebook.com/";
 
-
-
-
 string draph_page_publish_text(string token, string object_id, string text)
 {
     enforce(token !is null);
@@ -19,9 +16,7 @@ string draph_page_publish_text(string token, string object_id, string text)
     return post(post_url, ["access_token": token, "message": text]).idup;
 }
 
-
 /***** TO BE IMPLEMENTED *****/
-
 
 string draph_page_publish_image(string token, string page_id, byte[] image)
 {
